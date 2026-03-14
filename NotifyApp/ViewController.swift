@@ -136,7 +136,7 @@ class ViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Привет от NotifyApp! 👋"
         content.body = "Прошло 5 секунд с момента запуска приложения."
-        content.sound = .default
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("alarm.wav"))
         content.badge = 1
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
